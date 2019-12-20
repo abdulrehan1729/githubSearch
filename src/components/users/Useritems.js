@@ -1,18 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-const Useritems = () => {
-  let state = {
-    id: "id",
-    login: "octocat",
-    avatar_ulr: "https://github.com/images/error/octocat_happy.gif",
-    html_url: "https://github.com/octocat"
-  };
-
-  const { login, avatar_ulr, html_url } = state;
+const Useritems = ({ user: { login, avatar_url, html_url } }) => {
   return (
     <div className="card text-center">
       <img
-        src={avatar_ulr}
+        src={avatar_url}
         alt=""
         className="round-img"
         style={{ width: "70px" }}
